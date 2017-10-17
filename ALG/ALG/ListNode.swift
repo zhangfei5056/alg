@@ -1,7 +1,11 @@
 
-class ListNode {
+class ListNode:Hash, CustomStringConvertible {
     var val:Int?
     var next:ListNode?
+    
+    var description: String { // CustomStringConvertible
+        return String(describing: self.val)
+    }
     
     init(_ data:Int?) {
         self.val = data
@@ -49,7 +53,7 @@ class ListNode {
     }
     
     
-    static func toArray(head:ListNode?) -> [Int] {
+    static func toList(head:ListNode?) -> [Int] {
         var res = [Int]()
         var p_head = head
         while let node = p_head {
@@ -65,12 +69,12 @@ class ListNode {
         let head = toLinkedList(array: a)
         
         print(toLinkedListTra(head: head))
-        print(toArray(head: head))
+        print(toList(head: head))
         print(toLinkedListTra(head: head))
         
         
         let head2 = toLinkedList(strOrArray: "1->3->null" as AnyObject)
-        print(toArray(head: head2))
+        print(toList(head: head2))
         print(toLinkedListTra(head: head2))
         
     }
