@@ -13,6 +13,8 @@
 		5F1874E91F949623001C8BFD /* TreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1874E61F949623001C8BFD /* TreeNode.swift */; };
 		5F1874EC1F949E08001C8BFD /* ListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1874EB1F949E08001C8BFD /* ListNode.swift */; };
 		5F1874EF1F94A418001C8BFD /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1874EE1F94A418001C8BFD /* LinkedList.swift */; };
+		5F28A7521F967A500062A515 /* GraphNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F28A7511F967A500062A515 /* GraphNode.swift */; };
+		5F28A7541F967D920062A515 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F28A7531F967D920062A515 /* Graph.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +37,8 @@
 		5F1874E61F949623001C8BFD /* TreeNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeNode.swift; sourceTree = "<group>"; };
 		5F1874EB1F949E08001C8BFD /* ListNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListNode.swift; sourceTree = "<group>"; };
 		5F1874EE1F94A418001C8BFD /* LinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LinkedList.swift; path = ../LinkedList.swift; sourceTree = "<group>"; };
+		5F28A7511F967A500062A515 /* GraphNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphNode.swift; sourceTree = "<group>"; };
+		5F28A7531F967D920062A515 /* Graph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,9 +71,10 @@
 		5F1874DC1F9495F4001C8BFD /* ALG */ = {
 			isa = PBXGroup;
 			children = (
+				5F1874E41F949623001C8BFD /* Hash.swift */,
+				5F28A7551F967DD90062A515 /* Graph */,
 				5F1874EA1F949628001C8BFD /* Tree */,
 				5F1874ED1F94A407001C8BFD /* LinkedList */,
-				5F1874E41F949623001C8BFD /* Hash.swift */,
 				5F1874DD1F9495F4001C8BFD /* main.swift */,
 			);
 			path = ALG;
@@ -91,6 +96,15 @@
 				5F1874EE1F94A418001C8BFD /* LinkedList.swift */,
 			);
 			name = LinkedList;
+			sourceTree = "<group>";
+		};
+		5F28A7551F967DD90062A515 /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+				5F28A7511F967A500062A515 /* GraphNode.swift */,
+				5F28A7531F967D920062A515 /* Graph.swift */,
+			);
+			name = Graph;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,8 +165,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F28A7541F967D920062A515 /* Graph.swift in Sources */,
 				5F1874EF1F94A418001C8BFD /* LinkedList.swift in Sources */,
 				5F1874E81F949623001C8BFD /* Tree.swift in Sources */,
+				5F28A7521F967A500062A515 /* GraphNode.swift in Sources */,
 				5F1874EC1F949E08001C8BFD /* ListNode.swift in Sources */,
 				5F1874DE1F9495F4001C8BFD /* main.swift in Sources */,
 				5F1874E71F949623001C8BFD /* Hash.swift in Sources */,

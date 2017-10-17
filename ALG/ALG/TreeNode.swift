@@ -5,7 +5,7 @@ class TreeNode: Hash, CustomStringConvertible {
     var left:TreeNode?
     var right:TreeNode?
     
-    init(val:Any) {
+    init(_ val:Any) {
         self.val = val
     }
 
@@ -47,21 +47,21 @@ class TreeNode: Hash, CustomStringConvertible {
             nodeList.append("#")
         }
         
-        let root = TreeNode(val: nodeList[0])
+        let root = TreeNode(nodeList[0])
         var queue:[TreeNode] = [root]
         var index = 1
         while index < nodeList.count {
             let parent = queue.removeFirst()
             
             if nodeList[index] is Int {
-                let node = TreeNode(val: nodeList[index] as Any)
+                let node = TreeNode(nodeList[index] as Any)
                 parent.left = node
                 queue.append(node)
             }
             index += 1
             
             if nodeList[index] is Int {
-                let node = TreeNode(val: nodeList[index] as Any)
+                let node = TreeNode(nodeList[index] as Any)
                 parent.right = node
                 queue.append(node)
             }

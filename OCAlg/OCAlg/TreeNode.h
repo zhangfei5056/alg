@@ -7,9 +7,13 @@
 @property (nonatomic, strong) TreeNode *right;
 
 + (void)demo;
+
 - (instancetype)initWith:(int)val;
+
 + (TreeNode *)toTree:(NSMutableArray *)ary;
+
 + (NSArray *)toList:(TreeNode *)root;
+
 @end
 
 @implementation TreeNode
@@ -28,7 +32,6 @@
     return [NSString stringWithFormat:@"%p", self].hash;
 }
 
-
 - (BOOL)isEqual:(TreeNode *)object {
     if (![object isKindOfClass:self.class]) {
         return NO;
@@ -42,6 +45,10 @@
     objectCopy.left = self.left;
     objectCopy.right = self.right;
     return objectCopy;
+}
+
+- (NSString *)description {
+    return [NSString stringWithFormat:@"%d", self.val];
 }
 
 + (TreeNode *)toTree:(NSMutableArray *)ary {
@@ -102,4 +109,5 @@
     NSArray *list = [TreeNode toList:root];
     NSLog(@"🌞👉%@👈🌞",[NSString stringWithFormat:@"%@", list]);
 }
+
 @end
