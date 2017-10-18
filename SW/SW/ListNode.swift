@@ -1,5 +1,5 @@
 
-class ListNode:Hash, CustomStringConvertible {
+class ListNode:Hashable, CustomStringConvertible {
     var val:Int
     var next:ListNode?
     
@@ -7,6 +7,16 @@ class ListNode:Hash, CustomStringConvertible {
         return String(describing: self.val)
     }
     
+    var hashValue: Int {
+        let bits = Unmanaged<AnyObject>.passUnretained(self as AnyObject)
+        let ptr = bits.toOpaque()
+        return ptr.hashValue
+    }
+    
+    static func ==(lhs: ListNode, rhs: ListNode) -> Bool {
+        return lhs.hashValue == rhs.hashValue
+    }
+
     init(_ data:Int) {
         self.val = data
     }

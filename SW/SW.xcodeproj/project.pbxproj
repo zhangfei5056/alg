@@ -52,6 +52,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F48CFFB1F97134F00FF3746 /* Tree */ = {
+			isa = PBXGroup;
+			children = (
+				5FECAA9E1F97103300876183 /* Tree.swift */,
+				5FECAA9F1F97103300876183 /* TreeNode.swift */,
+			);
+			name = Tree;
+			sourceTree = "<group>";
+		};
+		5F48CFFC1F97135600FF3746 /* LinkedList */ = {
+			isa = PBXGroup;
+			children = (
+				5FECAAA61F97108B00876183 /* LinkedList.swift */,
+				5FECAA9D1F97103300876183 /* ListNode.swift */,
+			);
+			name = LinkedList;
+			sourceTree = "<group>";
+		};
+		5F48CFFD1F97136100FF3746 /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+				5FECAA9A1F97103300876183 /* Graph.swift */,
+				5FECAA9B1F97103300876183 /* GraphNode.swift */,
+			);
+			name = Graph;
+			sourceTree = "<group>";
+		};
 		5FECAA741F97100300876183 = {
 			isa = PBXGroup;
 			children = (
@@ -71,13 +98,10 @@
 		5FECAA7F1F97100300876183 /* SW */ = {
 			isa = PBXGroup;
 			children = (
-				5FECAAA61F97108B00876183 /* LinkedList.swift */,
-				5FECAA9A1F97103300876183 /* Graph.swift */,
-				5FECAA9B1F97103300876183 /* GraphNode.swift */,
 				5FECAA9C1F97103300876183 /* Hash.swift */,
-				5FECAA9D1F97103300876183 /* ListNode.swift */,
-				5FECAA9E1F97103300876183 /* Tree.swift */,
-				5FECAA9F1F97103300876183 /* TreeNode.swift */,
+				5F48CFFD1F97136100FF3746 /* Graph */,
+				5F48CFFC1F97135600FF3746 /* LinkedList */,
+				5F48CFFB1F97134F00FF3746 /* Tree */,
 				5FECAA801F97100300876183 /* main.swift */,
 			);
 			path = SW;
@@ -280,6 +304,7 @@
 				5FECAA861F97100300876183 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

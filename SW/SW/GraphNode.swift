@@ -1,6 +1,6 @@
 import Foundation
 
-class GraphNode:Hash, CustomStringConvertible {
+class GraphNode:Hashable, CustomStringConvertible {
     var val:Int
     var neighbors:[GraphNode] = []
     
@@ -10,6 +10,16 @@ class GraphNode:Hash, CustomStringConvertible {
     
     var description: String { // CustomStringConvertible
         return "val=\(self.val),neighbors=\(self.neighbors)"
+    }
+    
+    var hashValue: Int {
+        let bits = Unmanaged<AnyObject>.passUnretained(self as AnyObject)
+        let ptr = bits.toOpaque()
+        return ptr.hashValue
+    }
+    
+    static func ==(lhs: GraphNode, rhs: GraphNode) -> Bool {
+        return lhs.hashValue == rhs.hashValue
     }
     
     static func toGraph(dataList:[Int]) -> GraphNode {

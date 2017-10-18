@@ -1,6 +1,6 @@
 import Foundation
 
-class TreeNode: Hash, CustomStringConvertible {
+class TreeNode:Hashable, CustomStringConvertible {
     var val:Any
     var left:TreeNode?
     var right:TreeNode?
@@ -12,6 +12,17 @@ class TreeNode: Hash, CustomStringConvertible {
     var description: String { // CustomStringConvertible
         return "\(self.val)"
     }
+    
+    var hashValue: Int {
+        let bits = Unmanaged<AnyObject>.passUnretained(self as AnyObject)
+        let ptr = bits.toOpaque()
+        return ptr.hashValue
+    }
+    
+    static func ==(lhs: TreeNode, rhs: TreeNode) -> Bool {
+        return lhs.hashValue == rhs.hashValue
+    }
+
 
 
     static func toTreeList(root:TreeNode?) -> [Any] {
