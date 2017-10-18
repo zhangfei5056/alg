@@ -1,18 +1,18 @@
 
 class ListNode:Hash, CustomStringConvertible {
-    var val:Int?
+    var val:Int
     var next:ListNode?
     
     var description: String { // CustomStringConvertible
         return String(describing: self.val)
     }
     
-    init(_ data:Int?) {
+    init(_ data:Int) {
         self.val = data
     }
     
     static func toLinkedList(array:[Int]) -> ListNode? {
-        if array.count == 0 {
+        guard array.count != 0 else {
             return nil
         }
         let dummy = ListNode(-1)
@@ -29,13 +29,14 @@ class ListNode:Hash, CustomStringConvertible {
         var res = ""
         var p_head = head
         while let node = p_head {
-            res += "\(node.val!)->"
+            res += "\(node.val)->"
             p_head = p_head?.next
         }
         return res+"null"
     }
     
     static func toLinkedList(strOrArray:AnyObject) -> ListNode? {
+    
         if let str = strOrArray as? String {
             let ary:[Int] = formatStr2Array(traStr: str)
             return toLinkedList(array: ary)
@@ -54,11 +55,14 @@ class ListNode:Hash, CustomStringConvertible {
     
     
     static func toList(head:ListNode?) -> [Int] {
+        if head == nil {
+            return []
+        }
         var res = [Int]()
         var p_head = head
-        while let node = p_head {
-            res.append(node.val!)
-            p_head = p_head?.next
+        while p_head != nil {
+            res.append(p_head!.val)
+            p_head = p_head!.next
         }
         return res
     }

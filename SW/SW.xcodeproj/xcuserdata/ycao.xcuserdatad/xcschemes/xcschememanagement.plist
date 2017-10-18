@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>OCAlg.xcscheme</key>
+		<key>SW.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>5F0E0BCF1F9605AB001648E9</key>
+		<key>5FECAA7C1F97100300876183</key>
 		<dict>
 			<key>primary</key>
 			<true/>

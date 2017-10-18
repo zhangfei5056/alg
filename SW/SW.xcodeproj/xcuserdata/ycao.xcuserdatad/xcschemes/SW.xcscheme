@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5F1874D91F9495F4001C8BFD"
-               BuildableName = "ALG"
-               BlueprintName = "ALG"
-               ReferencedContainer = "container:ALG.xcodeproj">
+               BlueprintIdentifier = "5FECAA7C1F97100300876183"
+               BuildableName = "SW"
+               BlueprintName = "SW"
+               ReferencedContainer = "container:SW.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5F1874D91F9495F4001C8BFD"
-            BuildableName = "ALG"
-            BlueprintName = "ALG"
-            ReferencedContainer = "container:ALG.xcodeproj">
+            BlueprintIdentifier = "5FECAA7C1F97100300876183"
+            BuildableName = "SW"
+            BlueprintName = "SW"
+            ReferencedContainer = "container:SW.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5F1874D91F9495F4001C8BFD"
-            BuildableName = "ALG"
-            BlueprintName = "ALG"
-            ReferencedContainer = "container:ALG.xcodeproj">
+            BlueprintIdentifier = "5FECAA7C1F97100300876183"
+            BuildableName = "SW"
+            BlueprintName = "SW"
+            ReferencedContainer = "container:SW.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5F1874D91F9495F4001C8BFD"
-            BuildableName = "ALG"
-            BlueprintName = "ALG"
-            ReferencedContainer = "container:ALG.xcodeproj">
+            BlueprintIdentifier = "5FECAA7C1F97100300876183"
+            BuildableName = "SW"
+            BlueprintName = "SW"
+            ReferencedContainer = "container:SW.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

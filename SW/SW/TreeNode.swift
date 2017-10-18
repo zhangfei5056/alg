@@ -31,15 +31,13 @@ class TreeNode: Hash, CustomStringConvertible {
         while let last = res.last as? String {
             if last == "#" {
                 res.removeLast()
-            }else {
-                break
             }
         }
         return res
     }
 
-    static func toTree(nodeList:inout [Any]) -> TreeNode? {
-        guard nodeList.isEmpty == false else {
+    static func toTree(nodeList:inout [Any]?) -> TreeNode? {
+        guard var nodeList = nodeList,  nodeList.count != 0 else {
             return nil
         }
         
@@ -53,15 +51,15 @@ class TreeNode: Hash, CustomStringConvertible {
         while index < nodeList.count {
             let parent = queue.removeFirst()
             
-            if nodeList[index] is Int {
-                let node = TreeNode(nodeList[index] as Any)
+            if (nodeList[index] is String) == false {
+                let node = TreeNode(nodeList[index])
                 parent.left = node
                 queue.append(node)
             }
             index += 1
             
-            if nodeList[index] is Int {
-                let node = TreeNode(nodeList[index] as Any)
+            if (nodeList[index] is String) == false {
+                let node = TreeNode(nodeList[index])
                 parent.right = node
                 queue.append(node)
             }
@@ -71,20 +69,23 @@ class TreeNode: Hash, CustomStringConvertible {
     }
     
     static func preOrder(root:TreeNode?) {
-        guard root != nil else {
-            return
-        }
-        print(root!.val)
-        preOrder(root: root!.left)
-        preOrder(root: root!.right)
+//        guard root != nil else {
+//            return
+//        }
+        guard let root = root else {return}
+        print(root.val)
+        preOrder(root: root.left)
+        preOrder(root: root.right)
         
     }
     
     static func demo(){
-        var nodeList:[Any] = [1,2,3,"#",4,"#","#",5]
-        let root = TreeNode.toTree(nodeList: &nodeList)
+        var nodeList:[Any]? = [1,2,3,"#",4,"#","#",5]
+        let root:TreeNode? = TreeNode.toTree(nodeList: &nodeList)
         let resutlList = TreeNode.toTreeList(root: root)
         print(resutlList)
+        
+        TreeNode.preOrder(root: root)
     }
 }
 
