@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
 
-@interface ListNode : NSObject
+@interface ListNode : NSObject <NSCopying>
 
 @property (nonatomic, strong) id val;
 @property (nonatomic, strong) ListNode *next;
@@ -29,11 +29,11 @@
 }
 
 
-- (BOOL)isEqual:(TreeNode *)object {
+- (BOOL)isEqual:(ListNode *)object {
     if (![object isKindOfClass:self.class]) {
         return NO;
     }
-    return object.hash == self.hash;
+    return object.val == self.val;
 }
 
 - (id)copyWithZone:(NSZone *)zone {

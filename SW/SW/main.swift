@@ -1,7 +1,7 @@
 import Foundation
 
-Tree.testTree()
-LinkedList.testLinkedList()
+//Tree.testTree()
+//LinkedList.testLinkedList()
 Graph.testGraph()
 
 

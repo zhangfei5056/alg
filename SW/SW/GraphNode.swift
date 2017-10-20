@@ -9,7 +9,7 @@ class GraphNode:Hashable, CustomStringConvertible {
     }
     
     var description: String { // CustomStringConvertible
-        return "val=\(self.val),neighbors=\(self.neighbors)"
+        return "{val=\(self.val),neighbors=\(self.neighbors)}"
     }
     
     var hashValue: Int {
@@ -64,9 +64,11 @@ class GraphNode:Hashable, CustomStringConvertible {
                     let eachNode = getNode(num: eachNum, nodeDict: &nodeDict)
                     node.neighbors.append(eachNode)
                 }
+                
             }
             
         }
+        
         return root
     }
     
@@ -74,10 +76,13 @@ class GraphNode:Hashable, CustomStringConvertible {
         
         func dfs2(root:GraphNode?, map:inout [GraphNode: Int]) {
             guard let root = root else {return}
+            print("🌞👉🏻\(root.hashValue)👈🏻🌞")
             map[root] = 1
             for i in root.neighbors {
-                if map.keys.contains(i) == false {
+                if map[i] != 1 {
                     dfs2(root: i, map: &map)
+                }else {
+                    print("🌞👉🏻\(i)👈🏻🌞")
                 }
             }
         }
