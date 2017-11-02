@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F899B181FA988BA0062A40C /* Heap.h in Sources */ = {isa = PBXBuildFile; fileRef = 5F899B171FA988BA0062A40C /* Heap.h */; };
 		5FECAA941F97101600876183 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FECAA931F97101600876183 /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		5F36D9571F976DD9007F166A /* GraphNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphNode.h; sourceTree = "<group>"; };
+		5F899B171FA988BA0062A40C /* Heap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Heap.h; sourceTree = "<group>"; };
 		5FECAA901F97101600876183 /* OC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OC; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FECAA931F97101600876183 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5FECAAA81F9710B600876183 /* ListNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListNode.h; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				5FECAAA81F9710B600876183 /* ListNode.h */,
 				5FECAAA91F9710B600876183 /* TreeNode.h */,
 				5F36D9571F976DD9007F166A /* GraphNode.h */,
+				5F899B171FA988BA0062A40C /* Heap.h */,
 				5FECAA931F97101600876183 /* main.m */,
 			);
 			path = OC;
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FECAA941F97101600876183 /* main.m in Sources */,
+				5F899B181FA988BA0062A40C /* Heap.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -4,7 +4,7 @@
 @interface GraphNode : NSObject <NSCopying>
 
 @property (nonatomic, assign) id val;
-@property (nonatomic, copy) NSMutableArray <GraphNode *>*neighbors;
+@property (nonatomic, strong) NSMutableArray <GraphNode *>*neighbors;
 
 - (instancetype)initWith:(id)val;
 

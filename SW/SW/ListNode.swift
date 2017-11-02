@@ -14,7 +14,7 @@ class ListNode:Hashable, CustomStringConvertible {
     }
     
     static func ==(lhs: ListNode, rhs: ListNode) -> Bool {
-        return lhs.hashValue == rhs.hashValue
+        return lhs.val == rhs.val
     }
 
     init(_ data:Int) {

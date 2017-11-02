@@ -19,7 +19,7 @@ class GraphNode:Hashable, CustomStringConvertible {
     }
     
     static func ==(lhs: GraphNode, rhs: GraphNode) -> Bool {
-        return lhs.hashValue == rhs.hashValue
+        return lhs.val == rhs.val
     }
     
     static func toGraph(dataList:[Int]) -> GraphNode {
@@ -76,13 +76,10 @@ class GraphNode:Hashable, CustomStringConvertible {
         
         func dfs2(root:GraphNode?, map:inout [GraphNode: Int]) {
             guard let root = root else {return}
-            print("🌞👉🏻\(root.hashValue)👈🏻🌞")
             map[root] = 1
             for i in root.neighbors {
                 if map[i] != 1 {
                     dfs2(root: i, map: &map)
-                }else {
-                    print("🌞👉🏻\(i)👈🏻🌞")
                 }
             }
         }

@@ -1,8 +1,8 @@
 import Foundation
 
-//Tree.testTree()
+Tree.testTree()
 //LinkedList.testLinkedList()
-Graph.testGraph()
+//Graph.testGraph()
 
 
 //let a:[Any]? = [1,2,3,"#", 4]

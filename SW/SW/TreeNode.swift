@@ -1,11 +1,11 @@
 import Foundation
 
 class TreeNode:Hashable, CustomStringConvertible {
-    var val:Any
+    var val:Int
     var left:TreeNode?
     var right:TreeNode?
     
-    init(_ val:Any) {
+    init(_ val:Int) {
         self.val = val
     }
 
@@ -20,7 +20,7 @@ class TreeNode:Hashable, CustomStringConvertible {
     }
     
     static func ==(lhs: TreeNode, rhs: TreeNode) -> Bool {
-        return lhs.hashValue == rhs.hashValue
+        return lhs.val == rhs.val
     }
 
 
@@ -56,21 +56,21 @@ class TreeNode:Hashable, CustomStringConvertible {
             nodeList.append("#")
         }
         
-        let root = TreeNode(nodeList[0])
+        let root = TreeNode(nodeList[0] as! Int)
         var queue:[TreeNode] = [root]
         var index = 1
         while index < nodeList.count {
             let parent = queue.removeFirst()
             
             if (nodeList[index] is String) == false {
-                let node = TreeNode(nodeList[index])
+                let node = TreeNode(nodeList[index] as! Int)
                 parent.left = node
                 queue.append(node)
             }
             index += 1
             
             if (nodeList[index] is String) == false {
-                let node = TreeNode(nodeList[index])
+                let node = TreeNode(nodeList[index] as! Int)
                 parent.right = node
                 queue.append(node)
             }
